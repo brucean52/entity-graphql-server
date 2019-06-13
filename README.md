@@ -7,9 +7,9 @@ An example GraphQL server implementation using MarkLogic Entity Services
 
 ## How to use
 
->1. `npm install`
->2. `npm start`
->3. `localhost:4000/graphql` - GraphQL Playground
+1. `npm install`
+2. `npm start`
+3. `localhost:4000/graphql` - GraphQL Playground
 
 ## Example Queries
 
