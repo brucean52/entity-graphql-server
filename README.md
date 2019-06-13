@@ -13,7 +13,7 @@ An example GraphQL server implementation using MarkLogic Entity Services
 
 ## Example Queries
 
-``
+```
 query {
   getAllEntities {
     title
@@ -49,4 +49,4 @@ query {
     }
   }
 }
-``
+```
