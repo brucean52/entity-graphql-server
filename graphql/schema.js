@@ -1,30 +1,30 @@
 const { gql } = require('apollo-server');
 
 const typeDefs = gql`
-  type Entity {
+  type EntityModel {
     title: String
     version: String
     baseUri: String
     description: String
-    definitions: [Definitions]
+    entityDefinitions: [EntityDefinition]
   }
-  type Definitions {
+  type EntityDefinition {
     name: String
     primaryKey: String
     required: [String]
     wordLexicon: [String]
-    properties: [Properties]
+    properties: [Property]
   }
 
-  type Properties {
+  type Property {
     name: String
     datatype: String
     ref: String
   }
 
   type Query {
-    getAllEntities: [Entity],
-    getEntityByTitle( title: String): Entity
+    getAllEntities: [EntityModel],
+    getEntityByTitle( title: String): EntityModel
   }
 `;
 module.exports = typeDefs;
@@ -36,7 +36,7 @@ query {
   getAllEntities {
     title
     description
-    definitions {
+    entityDefinitions {
       name
       primaryKey
       required
@@ -54,7 +54,7 @@ query {
   getEntityByTitle(title: "Person"){
     title
     description
-    definitions {
+    entityDefinitions {
       name
       primaryKey
       required

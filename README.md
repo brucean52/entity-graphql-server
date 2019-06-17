@@ -18,7 +18,7 @@ query {
   getAllEntities {
     title
     description
-    definitions {
+    entityDefinitions {
       name
       primaryKey
       required
@@ -36,7 +36,7 @@ query {
   getEntityByTitle(title: "Person"){
     title
     description
-    definitions {
+    entityDefinitions {
       name
       primaryKey
       required

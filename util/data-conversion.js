@@ -1,7 +1,7 @@
 module.exports = {
   convertJSON: (data) => {
     const info = data.info;
-    let definitions = [];
+    let entityDefinitions = [];
     for (let [key, value] of Object.entries(data.definitions)) {
       let definition = {
         name: key,
@@ -26,8 +26,8 @@ module.exports = {
           definition = {...definition, [dKey]: dValue};
         }
       }
-      definitions.push(definition)
+      entityDefinitions.push(definition)
     }
-    return { ...info, definitions};
+    return { ...info, entityDefinitions};
   }
 }
