@@ -56,7 +56,7 @@ query {
     name
     primaryKey
     properties {
-			name
+      name
       datatype
     }
   }
