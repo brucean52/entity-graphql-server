@@ -10,6 +10,7 @@ An example GraphQL server implementation using MarkLogic Entity Services
 1. `npm install`
 2. `npm start`
 3. `localhost:4000/graphql` - GraphQL Playground
+4. Client code [entity-react-graphql](https://github.com/brucean52/entity-react-graphql)
 
 ## Example Queries
 
