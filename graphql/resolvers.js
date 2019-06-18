@@ -18,6 +18,13 @@ const resolvers = {
         return item.title === title;
       })
       return entity[0];
+    },
+    getAllEntityDefinitions() {
+      let entityDefsArray = [];
+      entities.map( entity => {
+        entityDefsArray.push(...entity.entityDefinitions);
+      });
+      return entityDefsArray;
     }
   }
 }

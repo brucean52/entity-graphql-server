@@ -50,4 +50,15 @@ query {
     }
   }
 }
+
+query { 
+  getAllEntityDefinitions{
+    name
+    primaryKey
+    properties {
+			name
+      datatype
+    }
+  }
+}
 ```

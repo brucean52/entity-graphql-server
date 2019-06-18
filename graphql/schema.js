@@ -24,7 +24,8 @@ const typeDefs = gql`
 
   type Query {
     getAllEntities: [EntityModel],
-    getEntityByTitle( title: String): EntityModel
+    getEntityByTitle( title: String): EntityModel,
+    getAllEntityDefinitions: [EntityDefinition]
   }
 `;
 module.exports = typeDefs;
@@ -64,6 +65,17 @@ query {
         datatype
         ref
       }
+    }
+  }
+}
+
+query { 
+  getAllEntityDefinitions{
+    name
+    primaryKey
+    properties {
+			name
+      datatype
     }
   }
 }
