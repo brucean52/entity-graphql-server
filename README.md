@@ -44,6 +44,7 @@ query {
       wordLexicon
       properties {
         name
+        description
         datatype
         ref
       }

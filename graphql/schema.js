@@ -19,6 +19,7 @@ const typeDefs = gql`
   type Property {
     name: String
     datatype: String
+    description: String
     ref: String
   }
 
@@ -44,6 +45,7 @@ query {
       wordLexicon
       properties {
         name
+        description
         datatype
         ref
       }

@@ -14,10 +14,15 @@ module.exports = {
             let propertyObject = { name: mKey };
             for (let [jKey, jValue] of Object.entries(mValue)) {
               let key = jKey;
+              let value = jValue;
               if (jKey === '$ref') {
                 key = 'ref';
               }
-              let propertyParameter = { [key]: jValue};
+              if (jKey === 'items'){
+                key = 'ref'
+                value = jValue['$ref'];
+              }
+              let propertyParameter = { [key]: value};
               Object.assign(propertyObject, propertyParameter);
             }
             definition.properties.push(propertyObject);
